@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .common{
+            margin: 0;padding: 0;
+            width: 80vw;
+            height: 80vh;
+            background-color: aliceblue;
+        }
+        .box{
+            height: 25%;
+            width: 25%;
+            background-color: red;
+        }
+        .changes:hover{
+            background-color: plum;
+            color: blueviolet;
+            transform:rotateZ(90deg);
+            transform: matrix(1,2,3,4,5,6);
+            transform: translate(120px, 50%);transform: scale(2);
+            /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); */
+            transform: perspective(17px);
+        }
+        .anime:hover{
+            animation: raman 0.5s infinite ease-in-out;
+        }
+        .box3:hover{
+            border-radius: 50%;
+            background-color: pink;
+            animation: pawar 3s infinite ;
+            animation-delay: 0.2s;
+        }
+        @keyframes pawar {
+            from{
+
+            }
+            to{
+                transform: translateX(900px);
+            }
+        }
+        @keyframes raman{
+            0%{
+                /* transform:rotateX(0deg); */
+                transform: translate(0px);
+            }
+            100%{
+                /* transform: rotate(360deg); */
+                transform: translate(1000px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="common">
+        <div class="box changes">BOX1</div>
+        <div class="box anime">BOX2</div>
+        <div class="box box3">BOX3</div>
+        <div class="box">BOX4</div>
+    </div>
+</body>
+</html>

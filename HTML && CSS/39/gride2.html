@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <style>
+        .container {
+            box-sizing: border-box;
+            border: 2px solid rgb(0, 0, 0);
+            display: grid;
+            height: 90vh;
+            grid-template-areas:
+                "nav nav nav"
+                "side content data"
+                "footer footer footer";
+            gap: 10px 20px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 2px solid blue;
+            height: 25vh;
+            /* width: 50px; */
+        }
+
+        .box1 {
+            /* grid-area: nav; */
+            /* background-color: gray; */
+            text-align: center;
+        }
+        .div{
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        video {
+            width: 400px;
+            height: 100%;
+
+            transform: rotate(270deg);
+            /* Rotate 90 degrees */
+            transform-origin: center center;
+        }
+
+        .box2 {
+            grid-area: side;
+            background-color: green;
+            text-align: center;
+            align-content: center;
+        }
+
+        .box3 {
+            grid-area: content;
+            text-align: end;
+            align-content: end;
+        }
+
+        .box4 {
+            grid-area: data;
+            text-align: end;
+            align-content: end;
+        }
+
+        .box5 {
+            grid-area: footer;
+            background-color: khaki;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+    <div class="vid">
+        <video controls src="1745525144961.mp4"></video>
+    </div>
+</body>
+
+</html>

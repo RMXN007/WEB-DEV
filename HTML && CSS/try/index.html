@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Web Development Express - Modern Web Design</title>
+    <meta name="description" content="Experience the future of web design with Sigma Web Development Express - modern, beautiful, and performant websites">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <h1 class="nav-logo">Sigma<span class="text-gradient">Dev</span></h1>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="animate-text">Welcome to</span>
+                        <span class="text-gradient animate-text delay-1">Sigma Web Development Express</span>
+                    </h1>
+                    <p class="hero-subtitle animate-text delay-2">
+                        Experience the future of web design: modern, beautiful, and performant
+                    </p>
+                    <div class="hero-cta animate-text delay-3">
+                        <button class="btn btn-primary btn-large ripple-effect">
+                            Get Started
+                            <span class="btn-icon">→</span>
+                        </button>
+                        <button class="btn btn-outline btn-large">
+                            View Projects
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Projects Delivered</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number" data-count="98">0</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">Countries Served</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="projects">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 class="section-title">Why Choose Sigma Dev?</h2>
+                    <p class="section-subtitle">
+                        We deliver cutting-edge web solutions with the latest technologies
+                    </p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll" data-delay="0">
+                        <div class="feature-icon">🎨</div>
+                        <h3 class="feature-title">Modern Design</h3>
+                        <p class="feature-description">
+                            Cutting-edge designs that follow the latest 2025 trends and best practices
+                        </p>
+                        <div class="feature-highlight"></div>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-delay="100">
+                        <div class="feature-icon">📱</div>
+                        <h3 class="feature-title">Responsive Layout</h3>
+                        <p class="feature-description">
+                            Perfect experience on every device with mobile-first responsive design
+                        </p>
+                        <div class="feature-highlight"></div>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-delay="200">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title">Fast Performance</h3>
+                        <p class="feature-description">
+                            Optimized for speed with lazy loading and modern web technologies
+                        </p>
+                        <div class="feature-highlight"></div>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-delay="300">
+                        <div class="feature-icon">🌙</div>
+                        <h3 class="feature-title">Dark Mode</h3>
+                        <p class="feature-description">
+                            Beautiful dark and light themes with user preference persistence
+                        </p>
+                        <div class="feature-highlight"></div>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-delay="400">
+                        <div class="feature-icon">✨</div>
+                        <h3 class="feature-title">Interactive Animations</h3>
+                        <p class="feature-description">
+                            Smooth scroll-triggered animations and micro-interactions
+                        </p>
+                        <div class="feature-highlight"></div>
+                    </div>
+                    
+                    <div class="feature-card animate-on-scroll" data-delay="500">
+                        <div class="feature-icon">♿</div>
+                        <h3 class="feature-title">Accessibility</h3>
+                        <p class="feature-description">
+                            WCAG compliant design ensuring inclusive user experience
+                        </p>
+                        <div class="feature-highlight"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 class="section-title">Ready to Start Your Project?</h2>
+                    <p class="section-subtitle">
+                        Let's create something amazing together
+                    </p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info animate-on-scroll">
+                        <div class="contact-card">
+                            <div class="contact-icon">📧</div>
+                            <h3>Email Us</h3>
+                            <p>hello@sigmadev.com</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">💬</div>
+                            <h3>Let's Chat</h3>
+                            <p>Available 24/7 for consultation</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">🚀</div>
+                            <h3>Quick Start</h3>
+                            <p>Get your project started in 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form animate-on-scroll" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full-width ripple-effect">
+                            Send Message
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Sigma<span class="text-gradient">Dev</span></h3>
+                    <p class="footer-tagline">Building the future, one website at a time</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#web-design">Web Design</a></li>
+                            <li><a href="#development">Development</a></li>
+                            <li><a href="#consulting">Consulting</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                            <li><a href="#terms">Terms of Service</a></li>
+                            <li><a href="#support">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sigma Web Development Express. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    <a href="#" class="social-link" aria-label="GitHub">🐱</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">
+        <span class="scroll-icon">↑</span>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-message"></span>
+        <button class="toast-close" aria-label="Close">&times;</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

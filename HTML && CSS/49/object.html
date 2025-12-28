@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object and Filter</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            height: 90vh;
+            width: 90vw;
+            background-position: center center;
+            background-image: url("https://imgs.search.brave.com/CSYas3EjuncWmJ8IIry8hP_m2jWp6oY1emGkuWD6pVo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC80LzUv/Zi8xMjU4MDgtMjg4/MHgxNjIwLWRlc2t0/b3AtaGQtZ2FtZS1v/Zi10aHJvbmVzLXdh/bGxwYXBlci1pbWFn/ZS5qcGc");
+            /* background-repeat: no-repeat; */
+        }
+        img{
+            height: 500px;
+            width: 500px;
+            object-fit:contain;
+            object-position: top center;
+        }
+        .box{
+            filter: drop-shadow(70%);
+            /* filter: grayscale(100%); */
+            filter: blur(-120px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <!-- <img src="https://imgs.search.brave.com/CSYas3EjuncWmJ8IIry8hP_m2jWp6oY1emGkuWD6pVo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC80LzUv/Zi8xMjU4MDgtMjg4/MHgxNjIwLWRlc2t0/b3AtaGQtZ2FtZS1v/Zi10aHJvbmVzLXdh/bGxwYXBlci1pbWFn/ZS5qcGc" alt="Danerish targerian">
+             -->
+            <img src="https://imgs.search.brave.com/KDrAOz8JKkjlD9aeI3YgcDvhAf7zl4bFJUe7JjagaGk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC83L2Qv/My8xMjU4NzYtMTA4/MHgxOTIwLXBob25l/LWZ1bGwtaGQtZ2Ft/ZS1vZi10aHJvbmVz/LXdhbGxwYXBlci5q/cGc" alt="">
+        </div>
+    </div>
+</body>
+</html>

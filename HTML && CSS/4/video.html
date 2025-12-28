@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        div{
+            margin: 5%;
+            padding: 5%;
+        }
+        div:hover{
+            background-color: chocolate;
+        }
+        div p{
+            background-color: pink;
+            color: red;
+        }
+        p{
+            color: blue;
+        }
+        p:hover{
+            color: chartreuse;
+            background-color: #070bff;
+        }
+        a:visited{
+            color: yellow;
+        }
+        a:link{
+            color: blueviolet;
+        }
+        a:hover{
+            color: aqua;
+            background-color: bisque;
+        }
+        *{
+            padding: 2px;
+            margin: 2px;
+            border-color: rgb(0, 0, 0);
+            border-style: solid;
+        }
+        h1{
+            text-align: center;
+            text-decoration:underline;
+            display:block;
+        }
+        header{
+            text-align: center;
+            text-decoration:underline;
+            display:block;
+        }
+        header:hover{
+            background-color: #ddff9d;
+            color: pink;
+        }
+        </style>
+</head>
+<body>
+    <h1>THIS IS HEAD</h1>
+    <header>WELCOME TO THE GALLERY</header>
+
+    <div>
+        Hello guys welcome again in red
+        <p>and welcome again in blue</p>
+        <a target="_blank" href="https://www.google.com">GOOGLE</a>
+        <a target="_blank" href="https://www.netflix.com">NETFLIX</a>
+    </div>
+
+    <div>
+        <video src="1.mp4" height="200" width="200" controls muted d"></video>
+        <video src="2.mp4" height="200" width="200" controls muted ></video>
+        <video src="3.mp4" height="200" width="200" controls muted ></video>
+        <video src="4.mp4" height="200" width="200" controls muted ></video>
+        <video src="5.mp4" height="200" width="200" controls muted ></video>
+        <video src="6.mp4" height="200" width="200" controls muted ></video>
+    </div>
+    <div>
+        <img src="1.jpg" alt="bird">
+        <img src="2.jpg" alt="lion">
+        <img src="3.jpg" alt="monkey">
+        <img src="4.jpg" alt="dog">
+        <img src="5.jpg" alt="cat">
+        <img src="6.jpg" alt="human">
+    </div>
+    <main>
+        <form action="/style.css">
+            <label for="user">Enter your name</label>
+            <input type="text" id="user" class="red" required>
+        </form>
+            <p>HELLO</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=0ibOv-ep9oNrVska" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5mPloevIHMw?si=_ph_Q4Y-f1Cm6TkB&amp;start=813" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

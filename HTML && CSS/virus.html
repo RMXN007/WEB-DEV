@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM CRITICAL ERROR - ACCESS DENIED</title>
+    <!-- Load Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for a retro/hacker look */
+        body {
+            font-family: 'Inter', monospace;
+            /* Change the cursor to a warning icon */
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Cpath fill='red' d='M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z'/%3E%3C/svg%3E") 10 10, crosshair;
+            overflow: hidden; /* Prevent scrolling when windows pop up */
+        }
+        .glitch {
+            /* Simple CSS animation to make the title look unstable */
+            animation: glitch-anim 0.5s infinite alternate;
+        }
+
+        @keyframes glitch-anim {
+            0% { transform: translate(1px, 1px) skewX(1deg); }
+            100% { transform: translate(-1px, -1px) skewX(-1deg); }
+        }
+
+        /* Basic styling for the spawned, annoying windows */
+        .spawned-window {
+            position: absolute;
+            z-index: 1000;
+            cursor: pointer;
+            user-select: none;
+            /* Red and green hacker aesthetic */
+            box-shadow: 0 4px 12px rgba(0, 255, 0, 0.4);
+            border: 2px solid #ff0000;
+            animation: pulse 1s infinite alternate;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #ff0000;
+        }
+
+        @keyframes pulse {
+            from { opacity: 1; }
+            to { opacity: 0.8; }
+        }
+    </style>
+</head>
+<body class="bg-black text-green-400 min-h-screen flex items-center justify-center p-4">
+
+    <!-- Main Virus Overlay Card -->
+    <div id="virus-container" class="w-full max-w-lg p-8 border-4 border-red-600 rounded-xl shadow-2xl bg-gray-900/90 transition-all duration-1000">
+
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-4 text-red-500 glitch">
+            SYSTEM CRITICAL LOCKDOWN
+        </h1>
+
+        <p id="status-message" class="text-xl text-center mb-6 text-red-300">
+            [ACCESS DENIED] - Unauthorized access detected. System resources locked.
+        </p>
+
+        <div class="mb-6 bg-gray-800 p-4 rounded-lg border border-red-700">
+            <p class="text-yellow-400 font-mono mb-2">
+                &gt; Enter Security Override Code to halt protocol:
+            </p>
+            <input
+                type="text"
+                id="override-input"
+                placeholder="--- TYPE HERE ---"
+                class="w-full p-3 bg-black border-2 border-green-500 text-green-400 text-lg rounded-md focus:outline-none focus:ring-4 focus:ring-green-700 transition"
+                autocomplete="off"
+            />
+        </div>
+
+        <div class="text-center text-red-500 text-sm">
+            <p>DO NOT ATTEMPT TO CLOSE THIS WINDOW.</p>
+            <p>Failure to comply will result in file system corruption.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        const overrideInput = document.getElementById('override-input');
+        const virusContainer = document.getElementById('virus-container');
+        const statusMessage = document.getElementById('status-message');
+        const exitCode = "Raman"; // The required secret code
+        let virusActive = true;
+        let popUpCount = 0;
+
+        // --- Core Spawning Function ---
+        function spawnWindow(event) {
+            if (!virusActive) return;
+
+            // CRITICAL: Stop propagation if the click originated from the main card or input field, 
+            // allowing the user to type the password without the screen filling up.
+            if (event.target === overrideInput || event.target.closest('#virus-container')) {
+                 return;
+            }
+
+            popUpCount++;
+
+            // Create the fake error window element
+            const windowDiv = document.createElement('div');
+            windowDiv.className = 'spawned-window p-2 md:p-4 rounded-lg text-xs md:text-sm font-bold shadow-xl';
+
+            // Random position generation to ensure they pop up everywhere
+            const x = Math.random() * (window.innerWidth - 200);
+            const y = Math.random() * (window.innerHeight - 100);
+
+            windowDiv.style.left = `${x}px`;
+            windowDiv.style.top = `${y}px`;
+            windowDiv.style.minWidth = '150px';
+
+            const messages = [
+                `ERROR 0x${Math.floor(Math.random() * 99999).toString(16).toUpperCase()} - Unhandled Exception`,
+                `File System Read Failure (0x80070002)`,
+                `Warning: RAM Allocation Overload`,
+                `Security Violation Detected: Access Denied`,
+                `System Core Integrity Compromised`,
+                `DATA CORRUPTION INITIATED (File: ${popUpCount}.sys)`
+            ];
+
+            const title = messages[Math.floor(Math.random() * messages.length)];
+            
+            // The spawned window structure
+            windowDiv.innerHTML = `
+                <div class="window-header bg-red-800 text-white flex justify-between items-center px-2 py-1 mb-2 rounded-t-md">
+                    <span>${title.substring(0, 30)}...</span>
+                    <!-- Fake close button that removes this single window but doesn't stop the virus -->
+                    <button class="text-red-300 ml-2" onclick="this.closest('.spawned-window').remove(); event.stopPropagation();">
+                        &#x2715; <!-- Cross Mark -->
+                    </button>
+                </div>
+                <p class="text-xs md:text-sm">
+                    Process [PID:${Math.floor(Math.random() * 9999)}] failed to terminate.
+                </p>
+                <p class="text-xs mt-1 text-gray-500">
+                    (Infected files: ${popUpCount})
+                </p>
+            `;
+
+            document.body.appendChild(windowDiv);
+
+            // Automatically remove the windows after a short delay to keep the screen semi-usable
+            setTimeout(() => {
+                if (windowDiv.parentNode) {
+                    windowDiv.remove();
+                }
+            }, 5000); 
+        }
+
+        // --- Password Check and Shutdown Logic ---
+        function checkPassword() {
+            const inputVal = overrideInput.value;
+
+            if (inputVal === exitCode) {
+                // VICTORY CONDITION: Shut down the virus
+                shutdownVirus();
+            } else if (inputVal.length >= exitCode.length) {
+                // Frustrate them if they type the wrong long code
+                overrideInput.value = '';
+                statusMessage.innerHTML = '<strong>[ACCESS DENIED]</strong> - Incorrect code. Retrying protocol...';
+                
+                // Trigger an immediate burst of pop-ups on incorrect entry
+                for (let i = 0; i < 5; i++) {
+                     spawnWindow({target: document.body}); 
+                }
+            }
+        }
+
+        function shutdownVirus() {
+            if (!virusActive) return;
+
+            // 1. Disable virus logic by removing event listeners
+            virusActive = false;
+            document.removeEventListener('mousedown', spawnWindow, true);
+            overrideInput.removeEventListener('input', checkPassword);
+            
+            // 2. Clear all spawned windows
+            document.querySelectorAll('.spawned-window').forEach(win => win.remove());
+
+            // 3. Update main container appearance and message to show success
+            virusContainer.classList.remove('glitch', 'border-red-600', 'bg-gray-900/90');
+            virusContainer.classList.add('border-green-600', 'bg-green-900/50');
+            
+            statusMessage.classList.remove('text-red-300');
+            statusMessage.classList.add('text-green-300');
+            statusMessage.innerHTML = `
+                <strong class="text-2xl">SYSTEM RESTORED!</strong> 
+                <p class="text-lg mt-2">Override Code accepted. You have neutralized the threat. Infected files stopped: ${popUpCount}.</p>
+            `;
+            
+            document.body.style.cursor = 'default'; // Restore normal cursor
+            overrideInput.style.display = 'none'; // Hide the input
+            document.querySelector('.text-yellow-400').style.display = 'none'; // Hide prompt
+            document.querySelector('.text-red-500').style.display = 'none'; // Hide warning
+            document.body.classList.remove('bg-black');
+            document.body.classList.add('bg-gray-800');
+        }
+
+        // --- Initialization ---
+
+        // The key listener: When the mouse button is pressed anywhere (mousedown)
+        document.addEventListener('mousedown', spawnWindow, true);
+
+        // Listener for the password input (checks on every keypress)
+        overrideInput.addEventListener('input', checkPassword);
+        
+        // Focus the input field immediately
+        overrideInput.focus();
+
+        // Optional: Prevent them from easily closing the browser tab/window
+        window.onbeforeunload = function() {
+            if (virusActive) {
+                return "System integrity is compromised. Are you sure you want to abandon the system?";
+            }
+        };
+
+    </script>
+</body>
+</html>

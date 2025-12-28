@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            
+        }
+        for (const key in object) {
+            if (!Object.hasOwn(object, key)) continue;
+            
+            const element = object[key];
+            
+            
+        }
+        for (const element of object) {
+            
+        }
+
+        // console.log("hello world!!!")
+        // let array=[130,120,40];
+        // for (let index = 0; index < array.length; index++) {
+        //     const element = array[index];
+        //     console.log(element)
+        // }
+
+        let a=prompt("Enter any number");
+        let factorial=1;
+        const arr=[1,2,3,4,5];
+        for(let index=0;index<a;index++){
+            arr[index]=index+1;
+        }
+
+        // arr.forEach(element => {
+            
+        // });
+
+        function fact(number1,number2){
+            return number1*number2;
+        }
+        let num=arr.reduce(fact);
+        console.log(num);
+
+
+        for(let i=1;i<=arr.length;i++){
+            factorial=factorial*i;
+        }
+        console.log(factorial);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.main {
+    background-image: url(Assets/image/bg.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    /* background-position: ; */
+    background-attachment: fixed;
+    background-size:cover ;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 100vw;
+}
+
+nav {
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+img {
+    height: 30px;
+}
+
+.btn>button {
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: white;
+}
+.btn1{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button.btn2 {
+    background-color: red;
+    font-weight: 500;
+}
+
+.data {
+    color: white;
+    padding: 69px;
+    font-size: larger;display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.data2{
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center; 
+    flex-direction: column;
+    
+}
+
+.bold {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.input{
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+}
+.btn3{
+    padding: 7px;
+    border-radius:5px;
+    font-size: large;
+}
+main{
+    border: 2px solid purple;
+    border-radius: 12px;
+    height: 900px;
+}

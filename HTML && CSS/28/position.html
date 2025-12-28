@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .parent{
+            border: 3px solid blueviolet;
+            margin: 20px;
+            padding: 20px;
+            position: absolute
+            ;
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 550px;
+            height: 350px;
+            margin: 10px;
+            padding: 2px;
+        }
+        .box1{
+            background-color: burlywood;
+            position: sticky;
+            height: 120px;
+            top: 0px;
+            margin: 0;padding: 0;
+            z-index: 2;
+        }
+        .box2{
+            background-color: rgb(135, 192, 222);
+            position: relative;
+            top: 20px; */
+            right: 20px;
+            z-index: -2;
+        }
+        .box3{
+            background-color: rgb(255, 0, 149);
+            z-index: -3px;
+            position: static;
+            height: 500px;
+            bottom: 200px;
+        }
+        .box4{
+            background-color: rgb(255, 147, 5);
+            position: fixed;
+            bottom: 2px;
+            height: 120px;
+            z-index: -4px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box box1">raman</div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+    
+</body>
+</html>

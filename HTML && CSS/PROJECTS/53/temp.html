@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Slider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .slider::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
+    }
+
+    .slide {
+      min-width: 200px;
+      margin: 0 10px;
+      flex-shrink: 0;
+    }
+
+    .slide img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Navigation Arrows */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Movie Carousel</h2>
+  <div class="slider-container">
+    <button class="arrow arrow-left">&#10094;</button>
+    <div class="slider" id="slider">
+      <div class="slide"><img src="Assets/image/wednesday.webp" alt="Wednesday"></div>
+      <div class="slide"><img src="Assets/image/kapil sharma.webp" alt="The Great Indian Kapil Show"></div>
+      <div class="slide"><img src="Assets/image/maareesan.webp" alt="Maaresan"></div>
+      <div class="slide"><img src="Assets/image/Fall for me.webp" alt="Fall For Me"></div>
+      <div class="slide"><img src="Assets/image/Raid 2.webp" alt="Raid 2"></div>
+      <div class="slide"><img src="Assets/image/kingdom .webp" alt="Kingdom Saamrajya"></div>
+      <div class="slide"><img src="Assets/image/maa.webp" alt="Maa"></div>
+      <div class="slide"><img src="Assets/image/tehran.webp" alt="Tehran"></div>
+      <div class="slide"><img src="Assets/image/squid game.webp" alt="Squid Game"></div>
+      <div class="slide"><img src="Assets/image/metro.webp" alt="Metro in Dino"></div>
+    </div>
+    <button class="arrow arrow-right">&#10095;</button>
+  </div>
+
+  <script>
+    const slider = document.getElementById("slider");
+    const leftArrow = document.querySelector(".arrow-left");
+    const rightArrow = document.querySelector(".arrow-right");
+
+    const slideAmount = 250; // how much to move each click
+
+    rightArrow.addEventListener("click", () => {
+      slider.scrollBy({ left: slideAmount, behavior: "smooth" });
+    });
+
+    leftArrow.addEventListener("click", () => {
+      slider.scrollBy({ left: -slideAmount, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
