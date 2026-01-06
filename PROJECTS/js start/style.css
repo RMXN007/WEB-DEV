@@ -33,8 +33,38 @@ details[open] > summary {
 .head{
     box-sizing: border-box;
     border: 2px solid violet;
-    background-color: rgb(192, 12, 12);
+    background-color: rgba(117, 12, 192, 0.393);
     height: 50px;
     width: 100%;
     display: flex;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+}
+.filter{
+    /* justify-content: center;
+    align-items: center; */
+    background-color: black;
+    color: aliceblue;
+    height: 70%;
+    padding: 5px;
+}
+.main{
+    width: 100vw;
+    height: 80vh;
+    background-color: #c560f0;
+}
+.detail{
+    height: inherit;
+    width: 1rem;
+    position: fixed;
+    left: 3rem;
+}
+p{
+    inline-size: 300px;
+    overflow: hidden;
 }

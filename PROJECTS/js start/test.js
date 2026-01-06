@@ -4,6 +4,7 @@ const closeBtn = details.querySelector(".close-btn");
 /* Close on button click */
 closeBtn.addEventListener("click", () => {
   details.removeAttribute("open");
+  console.log("working");
 });
 
 /* Close when clicking outside */
