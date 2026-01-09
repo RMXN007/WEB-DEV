@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    background-color: #201f31;
+    justify-content: space-evenly;
+}
+
+.header2 {
+    display: flex;
+    background-color: #201f31;
+    color: white;
+    justify-content: start;
+    /* margin: 10px; */
+    padding: 10px;
+}
+
+.login {
+    position: absolute;
+    /* display:inherit; */
+    right: 0px;
+}
+
+.menu {
+    position: absolute;
+    left: 0px;
+}
+
+details {
+    list-style: none;
+}
+
+.menuButtonStyle {
+    border: 2px solid gray;
+    background-color: rgb(179, 179, 179);
+    filter: opacity(0.5);
+}
+
+.body {
+    background-color: #201f31;
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+}
+
+.left {
+    height: 80vh;
+    width: 20%;
+    background-color: pink;
+    position: absolute;
+    left: 0;
+}
+
+.middle {
+    height: 80vh;
+    width: 55%;
+    background-color: red;
+    position: absolute;
+    left: 20%;
+}
+.upperBox{
+    height: 70%;
+}
+.lowerBox{
+    display: flex;
+    margin: 15px;
+}
+.LowerLeft{
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+.LowerRight{
+    /* color: palevioletred; */
+    margin:0 20px ;
+
+}
+.LowerRight >button{
+    border: none;
+    border-radius: 15px;
+    padding: 9px;
+    background-color: rgb(255, 84, 141);
+}
+.right {
+    height: 80vh;
+    width: 25%;
+    background-color: orange;
+    position: absolute;
+    right: 0;
+}
+
+.story {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.links{
+    color: white;
+    text-decoration:none;
+}
+.links:hover{
+    text-decoration: underline;
+}
+.links:visited{
+    color: palevioletred;
+}
+.DButton{
+    border-radius: 20px;
+    border: none;
+    padding: 9px;
+}
