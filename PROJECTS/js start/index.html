@@ -12,13 +12,14 @@
 <body>
     <div class="header border">
         <div class="menu">
-            <details>
+            <details class="wrapper">
                 <summary>
                     <img class="invert" height="30px" src="./assets/menu-bar.png" alt="">
                 </summary>
-                <ul>
+                <ul class="menucontent">
                     <li><button>Close menu</button></li>
-                    <li><button class="comDesign">Community</button></li>
+                    <!-- <li><button class="comDesign">Community</button></li> -->
+                     <li class="menuButtonStyle">Community</li>
                     <li class="menuButtonStyle">Home</li>
                     <li class="menuButtonStyle">Subbed Anime</li>
                     <li class="menuButtonStyle">Dubbed Anime</li>
@@ -28,7 +29,8 @@
             </details>
         </div>
 
-        <img height="30px" src="./assets/logo.png" alt="">
+        
+        <a href="https://hianimes.cz/"><img height="30px" src="./assets/logo.png" alt=""></a>
 
         <input type="text" placeholder="Search Anime">
         <button class="filter">filter</button>
